@@ -1,0 +1,339 @@
+@use "../components/mixins" as *;
+
+.best-picks{
+    @include main-padding;
+    background-color: rgb(244,244,244);
+
+    .max-width{
+        @include max-width;
+
+        .heading{
+            @include header;
+        }
+        p{
+            text-align: center;
+            max-width: 700px;
+            margin-inline: auto;
+            color: rgba($color: #000000, $alpha: 0.8);
+            margin-bottom: 6rem;
+        }
+    }
+}
+
+.best-picks-content {
+    .banner-wrapper-1{
+        display: flex;
+        align-content: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+        
+        .best-banner-1{
+            position: relative;
+            width: calc( 50% - 33px );
+            max-width: 400px;
+            height: 100%;
+            overflow: hidden;
+            cursor: pointer;
+            
+            &:hover::before{
+                transform: scale(1.05);
+                filter: grayscale(0);
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                background-image: url('grid-1.jpg');
+                filter: grayscale(200);
+                background-size: cover;
+                background-position: center center;
+                transition: all 0.2s ease;
+                
+                
+            }
+            .text_wrap{
+                font-family: "Poppins" , sans-serif;
+                padding: 30px 70px;
+                height: 400px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .text-1{
+                    color: #fff;
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                }
+                a{
+                    margin-top: 10px;
+                    text-decoration: none;
+                    color: #fff;
+                    text-transform: capitalize;
+                    position: relative;
+                    
+
+                    &:hover::after{
+                        width: 100%;
+                    }
+                    
+                    &::after{
+                        content: '';
+                        height: 2px;
+                        width: 0px;
+                        background-color: white;
+                        position: absolute;
+                        bottom: -2px;
+                        left: 0px;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+
+            }
+        }
+
+
+        .best-banner-2{
+            position: relative;
+            flex-grow: 1;
+            overflow: hidden;
+            cursor: pointer;
+            
+            &:hover::before{
+                transform: scale(1.05);
+                filter: grayscale(00);
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                background-image: url('grid-2.jpg');
+                filter: grayscale(200);
+                background-size: cover;
+                background-position: center center;
+                @include transition;
+            }
+            width: calc( 50% - 33px );
+            .text_wrap{
+                padding: 30px 70px;
+                height: 400px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                .text-1{
+                    color: #222;
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                }
+                a{
+                    margin-top: 10px;
+                    text-decoration: none;
+                    color: #222;
+                    text-transform: capitalize;
+                    position: relative;
+                    
+
+                    &:hover::after{
+                        width: 100%;
+                    }
+                    
+                    &::after{
+                        content: '';
+                        height: 2px;
+                        width: 0px;
+                        background-color: #222;
+                        position: absolute;
+                        bottom: -2px;
+                        left: 0px;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.banner-wrapper-2{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-evenly;
+        gap: 20px;
+        margin-top: 20px;
+
+        .best-banner-2{
+            position: relative;
+            width: calc( 50% - 33px );
+            max-width: 400px;
+            height: 100%;
+            overflow: hidden;
+            cursor: pointer;
+            
+            &:hover::before{
+                transform: scale(1.05);
+                filter: grayscale(0);
+            }
+            
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                background-image: url('grid-3.jpg');
+                filter: grayscale(200);
+                background-size: cover;
+                background-position: center center;
+                @include transition;
+            }
+            .text_wrap{
+                font-family: "Poppins" , sans-serif;
+                padding: 30px 70px;
+                height: 400px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .text-1{
+                    color: #fff;
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                }
+                a{
+                    margin-top: 10px;
+                    text-decoration: none;
+                    color: #fff;
+                    text-transform: capitalize;
+                    position: relative;
+                    
+
+                    &:hover::after{
+                        width: 100%;
+                    }
+                    
+                    &::after{
+                        content: '';
+                        height: 2px;
+                        width: 0px;
+                        background-color: #fff;
+                        position: absolute;
+                        bottom: -2px;
+                        left: 0px;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+
+            }
+        }
+        .best-banner-1{
+            position: relative;
+            flex-grow: 1;
+            overflow: hidden;
+            cursor: pointer;
+            
+            &:hover::before{
+                transform: scale(1.05);
+                filter: grayscale(00);
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                background-image: url('grid-4.jpg');
+                filter: grayscale(200);
+                background-size: cover;
+                background-position: center center;
+                @include transition;
+            }
+            width: calc( 50% - 33px );
+            .text_wrap{
+                padding: 30px 70px;
+                height: 400px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                .text-1{
+                    color: #222;
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                }
+                a{
+                    margin-top: 10px;
+                    text-decoration: none;
+                    color: #222;
+                    text-transform: capitalize;
+                    position: relative;
+                    
+
+                    &:hover::after{
+                        width: 100%;
+                    }
+                    
+                    &::after{
+                        content: '';
+                        height: 2px;
+                        width: 0px;
+                        background-color: #222;
+                        position: absolute;
+                        bottom: -2px;
+                        left: 0px;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+    
+}
+@media screen and (max-width:1020px) {
+    .banner-wrapper-2 .best-banner-1{
+        flex-grow: 0;
+    }
+    // .best-picks-content .banner-wrapper-1 .best-banner-1{
+    //     width: calc(50% - 33px);
+    // }
+    .best-picks-content .banner-wrapper-1 .best-banner-2{
+        flex-grow: 0;
+    }
+}
+@media screen and (max-width:680px) {
+    .best-picks .max-width{
+        @include max-width-responsive;
+    }
+    .banner-wrapper-2 .best-banner-1{
+        width: 100%;
+    }
+    .banner-wrapper-2 .best-banner-2{
+        width: 100%;
+    }
+    .best-picks-content .banner-wrapper-1 .best-banner-1{
+        width:100%;
+    }
+    .best-picks-content .banner-wrapper-1 .best-banner-2{
+        width:100%;
+    }
+}

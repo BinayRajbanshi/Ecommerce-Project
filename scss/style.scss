@@ -1,0 +1,15 @@
+// Including components
+@use "./components/buttons"; 
+@use "./components/custom";
+@use "./components/mixins";
+
+// including sections
+@use "./sections/navbar";
+@use "./sections/home";
+@use "./sections/category";
+@use "./sections/banners";
+@use "./sections/popular-products";
+@use "./sections/best-picks";
+@use "./sections/features";
+@use "./sections/footer";
+@use "./sections/end";
